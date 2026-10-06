@@ -3,13 +3,12 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "eodhd-asset-pricing"
-version = "0.1.0"
-description = "CLI utility for searching EODHD instruments by asset class."
+name = "eodhd-market-data-cli"
+version = "0.2.0"
+description = "Command line client for EODHD: instrument search, end-of-day prices, quotes and return stats."
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
-  "pandas>=2.0",
   "requests>=2.31",
 ]
 
@@ -19,10 +18,11 @@ dev = [
 ]
 
 [project.scripts]
-eodhd-search = "eodhd_asset_pricing.cli:main"
+eodhd = "eodhd_market_data.cli:main"
 
 [tool.setuptools.packages.find]
-include = ["eodhd_asset_pricing*"]
+include = ["eodhd_market_data*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+pythonpath = ["tests"]

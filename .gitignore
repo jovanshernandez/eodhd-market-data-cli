@@ -1,4 +1,14 @@
+# Python
 __pycache__/
+*.py[cod]
 .pytest_cache/
 *.egg-info/
+build/
+dist/
 .venv/
+
+# Local output (README examples write here)
+reports/
+
+# Secrets
+.env
